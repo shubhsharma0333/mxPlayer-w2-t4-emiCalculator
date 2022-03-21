@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>EMI CAL</title>
+    <script src="./emi.js"></script>
+  </head>
+  <body>
+    <h1 style="text-align: center;" > EMI Calculator</h1>  
+    <div style="display: flex; justify-content: center; align-items: center; margin-top: 70px;">
+        <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; width: 600px;">
+            <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Principle Amount</span>
+                </div>
+                <input id="pa" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+            </div>
+            <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Interest Rate</span>
+                </div>
+                <input id="ir" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+            </div> 
+            <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Tenure(in years)</span>
+                </div>
+                <input id="tenure" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+            </div> 
+           <div style=" margin: 40px ;width:600px;display: flex; flex-direction: row; justify-content: space-between; align-items: flex-start;">
+            <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                <button onclick="calculateEmi()" type="button" class="btn btn-primary">EMI/month</button>
+                <p id="emi"></p>
+                <p id="emi1"></p>
+            </div> 
+            <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                <button onclick="monthly()" type="button" class="btn btn-warning">Monthly EMI</button>
+                <p ></p>
+                <p ></p>
+            </div> 
+            <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                <button onclick="yearly()" type="button" class="btn btn-success">Yearly EMI</button>
+                <p ></p>
+                <p ></p>
+            </div> 
+           </div>      
+        </div> 
+
+    </div>
+    <div style="display: flex; align-items: center; justify-content: center;">
+        <div >
+            <table id="tables" class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Ammount to be Paid</th>
+                    <th scope="col">Ammount Remaining</th>
+                  </tr>
+                </thead> 
+                
+              </table>
+        </div>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>
